@@ -1,9 +1,9 @@
-import * as React from "react";
-import "./style.css";
-import { connect, Dispatch } from "react-redux";
-import { changeLanguage } from "Redux/Modules/Status";
-import { getTranslation, SupportedLanguage } from "Services/Geo";
-import { RootState } from "Redux/Store";
+import * as React from 'react';
+import './style.css';
+import { connect, Dispatch } from 'react-redux';
+import { changeLanguage } from '../../Redux/Modules/Status';
+import { getTranslation, SupportedLanguage } from 'Services/Geo';
+import { RootState } from '../../Redux/Store';
 
 const mapStateToProps = (state: RootState) => ({
   lang: state.status.lang,
@@ -25,21 +25,17 @@ class LanguageSelector extends React.Component<LanguageSelectorProps, {}> {
   };
   render() {
     return (
-      <div className="languageSelector">
-        <span className="langText">{getTranslation(this.props.lang, "")} </span>
+      <div className='languageSelector'>
+        <span className='langText'>{getTranslation(this.props.lang, '')} </span>
         <ul>
           <li
-            className={
-              this.props.lang === SupportedLanguage.en ? " active" : ""
-            }
+            className={this.props.lang === SupportedLanguage.en ? ' active' : ''}
             onClick={(e) => this.changeLanguage(SupportedLanguage.en)}
           >
             {/* <span className="flag uk" /> */}
           </li>
           <li
-            className={
-              this.props.lang === SupportedLanguage.vn ? " active" : ""
-            }
+            className={this.props.lang === SupportedLanguage.vn ? ' active' : ''}
             onClick={(e) => this.changeLanguage(SupportedLanguage.vn)}
           >
             {/* <span className="flag vn" /> */}

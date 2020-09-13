@@ -1,11 +1,11 @@
 import * as React from 'react';
 import './style.css';
-import Dashboard from 'Components/DashboardLayout';
+import Dashboard from '../../Components/DashboardLayout';
 import { RouteComponentProps } from 'react-router-dom';
 import SearchAgentForm from './Components/SearchAgentForm';
 import MyAgent from './Components/MyAgent';
 
-class AgentPage extends React.Component<RouteComponentProps<{action: string}>, {}> {
+class AgentPage extends React.Component<RouteComponentProps<{ action: string }>, {}> {
   AgentPageAction: {
     findAgent: JSX.Element;
     myAgent: JSX.Element;
@@ -16,7 +16,7 @@ class AgentPage extends React.Component<RouteComponentProps<{action: string}>, {
     this.AgentPageAction = {
       findAgent: <SearchAgentForm />,
       myAgent: <MyAgent />,
-      notFound: <h2>Agent's action not found !</h2>
+      notFound: <h2>Agent's action not found !</h2>,
     };
   }
   matchSection = () => {
@@ -29,14 +29,12 @@ class AgentPage extends React.Component<RouteComponentProps<{action: string}>, {
       default:
         return this.AgentPageAction.notFound;
     }
-  }
+  };
   render() {
     return (
-      <div className="AgentPage">
-        <Dashboard >
-          <div className="agentWrapper">
-            {this.matchSection()}
-          </div>
+      <div className='AgentPage'>
+        <Dashboard>
+          <div className='agentWrapper'>{this.matchSection()}</div>
         </Dashboard>
       </div>
     );

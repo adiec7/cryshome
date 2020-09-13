@@ -1,4 +1,4 @@
-import { getAuthToken, setUserToken } from 'Services/Api/Token';
+import { getAuthToken, setUserToken } from '../../../Services/Api/Token';
 /***********************************/
 /************* Actions *************/
 /***********************************/
@@ -13,7 +13,7 @@ const enum UserActionType {
 export function authenticate() {
   return {
     type: UserActionType.AUTHENTICATE,
-    payload: getAuthToken()
+    payload: getAuthToken(),
   };
 }
 
@@ -34,7 +34,7 @@ interface UserAction {
 
 export const initUserState: UserState = {
   isLogin: false,
-  isAuth: true
+  isAuth: true,
 };
 
 const userReducer = (state: UserState = initUserState, action: UserAction) => {
@@ -47,9 +47,10 @@ const userReducer = (state: UserState = initUserState, action: UserAction) => {
     }
     case UserActionType.AUTHENTICATE_REJECTED: {
       setUserToken(null);
-      return { ...state, isLogin: false, isAuth: true};
+      return { ...state, isLogin: false, isAuth: true };
     }
-    default: return state;
+    default:
+      return state;
   }
 };
 

@@ -1,17 +1,17 @@
-import { SupportedLanguage } from 'Services/Geo';
+import { SupportedLanguage } from '../../../Services/Geo';
 /***********************************/
 /************* Actions *************/
 /***********************************/
 
 const enum StatusActionType {
   REHYDRATE = 'persist/REHYDRATE',
-  LANGUAGE_CHANGE = 'LANGUAGE_CHANGE'
+  LANGUAGE_CHANGE = 'LANGUAGE_CHANGE',
 }
 
 export function changeLanguage(lang: SupportedLanguage) {
   return {
     type: StatusActionType.LANGUAGE_CHANGE,
-    payload: lang
+    payload: lang,
   };
 }
 
@@ -31,7 +31,7 @@ interface StatusAction {
 
 export const initStatusState: StatusState = {
   isPersist: false,
-  lang: SupportedLanguage.en
+  lang: SupportedLanguage.en,
 };
 
 const statusReducer = (state: StatusState = initStatusState, action: StatusAction) => {
@@ -43,7 +43,8 @@ const statusReducer = (state: StatusState = initStatusState, action: StatusActio
     case StatusActionType.LANGUAGE_CHANGE: {
       return { ...state, lang: action.payload };
     }
-    default: return state;
+    default:
+      return state;
   }
 };
 

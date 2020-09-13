@@ -1,4 +1,11 @@
-import { compose, applyMiddleware, createStore, Store, StoreEnhancer, combineReducers } from 'redux';
+import {
+  compose,
+  applyMiddleware,
+  createStore,
+  Store,
+  StoreEnhancer,
+  combineReducers,
+} from 'redux';
 import thunk from 'redux-thunk';
 import promise from 'redux-promise-middleware';
 import { persistStore, autoRehydrate } from 'redux-persist';
@@ -12,17 +19,21 @@ export interface RootState {
 }
 const initState: RootState = {
   status: initStatusState,
-  user: initUserState
-}; 
+  user: initUserState,
+};
 
 const rootReducer = combineReducers<RootState>({
   user,
-  status
+  status,
 });
 
 const hydrate: StoreEnhancer<RootState> = autoRehydrate() as StoreEnhancer<RootState>;
 const middleware: StoreEnhancer<RootState> = applyMiddleware(promise(), thunk, logger);
-const store: Store<RootState> = createStore<RootState>(rootReducer, initState, compose(middleware, hydrate));
+const store: Store<RootState> = createStore<RootState>(
+  rootReducer,
+  initState,
+  compose(middleware, hydrate)
+);
 
 persistStore(store, { whitelist: ['status'] });
 

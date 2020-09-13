@@ -1,13 +1,13 @@
 import * as React from 'react';
 import './style.css';
-import Dashboard from 'Components/DashboardLayout';
+import Dashboard from '../../Components/DashboardLayout';
 import { RouteComponentProps } from 'react-router-dom';
 import SellPage from './Components/Sell';
 import RentPage from './Components/Rent';
 import RenovationPage from './Components/Renovation';
 import AddNewPropertyForm from './Components/AddNewPropertyForm';
 
-class NewPropertyPage extends React.Component<RouteComponentProps<{action: string}>, {}> {
+class NewPropertyPage extends React.Component<RouteComponentProps<{ action: string }>, {}> {
   newPropertyAction: {
     sell: JSX.Element;
     rent: JSX.Element;
@@ -20,7 +20,7 @@ class NewPropertyPage extends React.Component<RouteComponentProps<{action: strin
       sell: <SellPage />,
       rent: <RentPage />,
       renovation: <RenovationPage />,
-      default: <AddNewPropertyForm />
+      default: <AddNewPropertyForm />,
     };
   }
   matchAction = () => {
@@ -35,14 +35,12 @@ class NewPropertyPage extends React.Component<RouteComponentProps<{action: strin
       default:
         return this.newPropertyAction.default;
     }
-  }
+  };
   render() {
     return (
-      <div className="infoPage">
-        <Dashboard >
-          <div className="infoWrapper">
-            {this.matchAction()}
-          </div>
+      <div className='infoPage'>
+        <Dashboard>
+          <div className='infoWrapper'>{this.matchAction()}</div>
         </Dashboard>
       </div>
     );

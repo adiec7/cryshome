@@ -5,9 +5,9 @@ import MyWallet from './Components/MyWallet';
 import DepositForm from './Components/DepositForm';
 import WithdrawForm from './Components/WithdrawForm';
 import RequestForm from './Components/RequestForm';
-import Dashboard from 'Components/DashboardLayout';
+import Dashboard from '../../Components/DashboardLayout';
 
-class WalletPage extends React.Component<RouteComponentProps<{action: string}>, {}> {
+class WalletPage extends React.Component<RouteComponentProps<{ action: string }>, {}> {
   WalletPageSection: {
     myWallet: JSX.Element;
     deposit: JSX.Element;
@@ -18,35 +18,33 @@ class WalletPage extends React.Component<RouteComponentProps<{action: string}>, 
   constructor() {
     super();
     this.WalletPageSection = {
-      myWallet: (<MyWallet />),
-      deposit: (<DepositForm />),
-      withdraw: (<WithdrawForm />),
-      request: (<RequestForm />),
-      notfound: (null)
+      myWallet: <MyWallet />,
+      deposit: <DepositForm />,
+      withdraw: <WithdrawForm />,
+      request: <RequestForm />,
+      notfound: null,
     };
   }
   matchSection = () => {
     const walletAction = this.props.match.params.action;
     switch (walletAction) {
-      case undefined: 
+      case undefined:
         return this.WalletPageSection.myWallet;
-      case 'deposit': 
+      case 'deposit':
         return this.WalletPageSection.deposit;
-      case 'withdraw': 
+      case 'withdraw':
         return this.WalletPageSection.withdraw;
-      case 'request': 
+      case 'request':
         return this.WalletPageSection.request;
       default:
         return this.WalletPageSection.notfound;
     }
-  }
+  };
   render() {
     return (
-      <div className="walletPage">
+      <div className='walletPage'>
         <Dashboard>
-          <div className="walletWrapper">
-            {this.matchSection()}
-          </div>
+          <div className='walletWrapper'>{this.matchSection()}</div>
         </Dashboard>
       </div>
     );
