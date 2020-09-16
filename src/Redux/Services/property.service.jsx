@@ -6,7 +6,7 @@ export const propertyService = {
   delete: _delete,
 };
 
-let user = JSON.parse(localStorage.getItem('user') || '');
+let user = JSON.parse(localStorage.getItem('user'));
 
 function getAll() {
   const requestOptions = {
