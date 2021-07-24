@@ -2,6 +2,9 @@
   "name": "ekobits",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "15.x"
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "google-map-react": "^0.24.0",
@@ -26,10 +29,16 @@
     "deploy": "gh-pages -d build",
     "dev": "react-scripts start",
     "dev-build": "react-scripts build",
-    "start":"react-scripts start",
+    "start": "react-scripts start",
     "build": "cp src/index.main.jsx src/index.jsx && react-scripts build",
     "start-admin": "cp src/index.admin.jsx src/index.jsx && react-scripts start",
     "build-admin": "cp src/index.admin.jsx src/index.jsx && react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
