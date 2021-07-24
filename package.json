@@ -30,7 +30,7 @@
     "dev": "react-scripts start",
     "dev-build": "react-scripts build",
     "start": "react-scripts start",
-    "build": "cp src/index.main.jsx src/index.jsx && react-scripts build",
+    "build": "cp src/index.main.jsx src/index.jsx && npm install && react-scripts build",
     "start-admin": "cp src/index.admin.jsx src/index.jsx && react-scripts start",
     "build-admin": "cp src/index.admin.jsx src/index.jsx && react-scripts build"
   },
