@@ -34,7 +34,7 @@
     "deploy": "gh-pages -d build",
     "dev": "react-scripts start",
     "dev-build": "react-scripts build",
-    "start": "react-scripts start",
+    "start": "serve -s build",
     "build": "cp src/index.main.jsx src/index.jsx && CI=false && react-scripts build",
     "start-admin": "cp src/index.admin.jsx src/index.jsx && react-scripts start",
     "build-admin": "cp src/index.admin.jsx src/index.jsx && react-scripts build"
