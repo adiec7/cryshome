@@ -25,10 +25,14 @@
     "redux-logger": "^3.0.6"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "dev": "react-scripts start",
+    "dev-build": "react-scripts build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "cp src/index.main.jsx src/index.jsx && react-scripts build",
+    "start-admin": "cp src/index.admin.jsx src/index.jsx && react-scripts start",
+    "build-admin": "cp src/index.admin.jsx src/index.jsx && react-scripts build"
   },
   "eslintConfig": {
     "extends": [
