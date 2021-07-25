@@ -11,9 +11,9 @@ class Caption extends React.Component {
     // }
     return (
       <div className='homeCaption'>
-        <div className='homeTitle'>{getTranslation(this.props.lang, 'Treasure Home Realtors')}</div>
+        <div className='homeTitle'>{getTranslation(this.props.lang, 'Crystal homes & properties')}</div>
         <div className='homeSubtitle'>{getTranslation(this.props.lang, '')}</div>
-        <Link className='btn btn-danger' to='/search'>
+        <Link className='btn btn-danger btn-lg' to='/search'>
           {getTranslation(this.props.lang, 'View Houses')}
         </Link>
       </div>
