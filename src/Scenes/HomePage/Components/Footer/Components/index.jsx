@@ -17,7 +17,7 @@ class FooterContainer extends React.Component {
           <GetInTouch>Get in Touch</GetInTouch>
           <Subscribe>Subscribe to Our Newsletter</Subscribe>
         </div>
-        <div className='footerCopyRight'>All Right Reserved © Techgoddess</div>
+        <div className='footerCopyRight'>All Right Reserved © Crystal Homes</div>
       </div>
     );
   }

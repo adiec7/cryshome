@@ -18,7 +18,7 @@ class Header extends React.Component {
       <div className='dashboardHeader'>
         <div className='logo'>
           <Link to='/'>
-           <img src="https://res.cloudinary.com/techgoddess/image/upload/v1599729162/TreasureHomes/1/2020-09-10T09:10:21.988Z.png" alt=""/>
+           <img src="https://i.ibb.co/F5SgL3G/logo-crystal-10.png" alt=""/>
           </Link>
         </div>
         <a href='#' className='navHandler' onClick={(e) => this.props.clickToggle()}>

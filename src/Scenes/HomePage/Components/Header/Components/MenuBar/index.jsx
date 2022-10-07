@@ -66,7 +66,7 @@ class MenuBar extends React.Component {
           <div className='homeLogo osLight'>
             <img
               className='logoimg'
-              src='https://res.cloudinary.com/techgoddess/image/upload/v1599729162/TreasureHomes/1/2020-09-10T09:10:21.988Z.png'
+              src='https://i.ibb.co/F5SgL3G/logo-crystal-10.png'
               alt=''
             />
           </div>
