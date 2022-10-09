@@ -11,9 +11,9 @@ class GetInTouch extends React.Component {
             <span className='fa fa-phone' /> 07065204689
           </li>
           <li className='footer-address osLight'>
-            <p>17 Lapai Close,</p>
-            <p>Off Modupe Young Street,</p>
-            <p>Thomas Estate Ajah</p>
+            <p>Suite 128,</p>
+            <p> Ikota Shopping Comple,</p>
+            <p>VGC,Lekki-Ajah, Lagos</p>
           </li>
           <li>
             <a href='#' className='btn btn-sm btn-icon btn-round btn-o btn-white'>
