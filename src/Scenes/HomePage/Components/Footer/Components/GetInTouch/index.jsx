@@ -8,7 +8,8 @@ class GetInTouch extends React.Component {
         <div className='touchTitle osLight'>{this.props.children}</div>
         <ul className='mainList'>
           <li className='footer-phone'>
-            <span className='fa fa-phone' /> 07065204689
+            <span className='fa fa-phone' /> +234 9124326447
+            <br />     +234 9066613966
           </li>
           <li className='footer-address osLight'>
             <p>Suite 128,</p>
