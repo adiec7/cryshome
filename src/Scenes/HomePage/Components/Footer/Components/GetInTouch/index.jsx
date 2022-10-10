@@ -13,7 +13,7 @@ class GetInTouch extends React.Component {
           </li>
           <li className='footer-address osLight'>
             <p>Suite 128,</p>
-            <p> Ikota Shopping Comple,</p>
+            <p> Ikota Shopping Complex,</p>
             <p>VGC,Lekki-Ajah, Lagos</p>
           </li>
           <li>
