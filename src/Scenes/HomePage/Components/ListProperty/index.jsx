@@ -65,8 +65,7 @@ class ListProperty extends React.Component {
         <div className='row listPropertyHeader'>
           <h3>Recently Listed Properties</h3>
           <h5>
-            Fusce risus metus, placerat in consectetur eu, porttitor a est sed sed dolor lorem cras
-            adipiscing
+            You can select one of our new Properties below.
           </h5>
         </div>
         <div className='row listPropertyContent'>
